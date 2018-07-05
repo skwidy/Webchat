@@ -195,6 +195,7 @@ App.propTypes = {
   removeAllMessages: PropTypes.func,
   onRef: PropTypes.func,
   clearMessagesOnclose: PropTypes.bool,
+  isReady: PropTypes.string
 }
 
 export default App
