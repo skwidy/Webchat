@@ -175,6 +175,7 @@ class App extends Component {
           secondaryHeader={secondaryHeader}
           secondaryContent={secondaryContent}
           getLastMessage={getLastMessage}
+          getConversationId={this.getConversationId}
         />
       </div>
     )
