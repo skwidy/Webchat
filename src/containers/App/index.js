@@ -27,6 +27,7 @@ const NO_LOCALSTORAGE_MESSAGE =
 class App extends Component {
   state = {
     expanded: this.props.expanded || false,
+    isReady: this.props.isReady || ''
   }
 
   componentDidMount() {
@@ -81,6 +82,7 @@ class App extends Component {
           break
       }
       this.setState({ expanded })
+      this.setState({ isReady })
     }
 
     if (expanded !== undefined && expanded !== this.state.expanded) {
