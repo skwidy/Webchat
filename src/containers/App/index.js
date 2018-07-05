@@ -114,6 +114,10 @@ class App extends Component {
     })
   }
 
+  getConversationId = () => {
+        return this.props.isReady
+  }
+
   clearMessages = () => {
     this.props.removeAllMessages()
   }
