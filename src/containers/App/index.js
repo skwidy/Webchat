@@ -26,8 +26,7 @@ const NO_LOCALSTORAGE_MESSAGE =
 )
 class App extends Component {
   state = {
-    expanded: this.props.expanded || false,
-    isReady: this.props.isReady || ''
+    expanded: this.props.expanded || false
   }
 
   componentDidMount() {
@@ -82,7 +81,6 @@ class App extends Component {
           break
       }
       this.setState({ expanded })
-      this.setState({ isReady })
     }
 
     if (expanded !== undefined && expanded !== this.state.expanded) {
@@ -137,6 +135,7 @@ class App extends Component {
       secondaryHeader,
       secondaryContent,
       getLastMessage,
+      isReady
     } = this.props
     const { expanded } = this.state
 
@@ -175,7 +174,7 @@ class App extends Component {
           secondaryHeader={secondaryHeader}
           secondaryContent={secondaryContent}
           getLastMessage={getLastMessage}
-          getConversationId={this.getConversationId}
+          isReady={isReady}
         />
       </div>
     )
@@ -202,7 +201,7 @@ App.propTypes = {
   removeAllMessages: PropTypes.func,
   onRef: PropTypes.func,
   clearMessagesOnclose: PropTypes.bool,
-  isReady: PropTypes.string
+  isReady: PropTypes.string,
 }
 
 export default App
